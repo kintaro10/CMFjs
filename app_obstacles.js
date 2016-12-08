@@ -1,16 +1,10 @@
-
-var container = document.getElementByID("container");
 var asteroide = document.getElementByID("image1");
-var diametreImg = parseFloat(getComputedStyle(asteroide).width);
-var vitesse = 10;
 
-function deplacerAsteroide () {
-	var xAsteroide = parseFloat(getComputedStyle(asteroide).left);
-	asteroide.style.left = (xAsteroide + vitesse) + "px";
-	requestAnimationFrame(deplacerAsteroide);
-}
+var max = 7;
 
-requestAnimationFrame(deplacerAsteroide);
+var nb = Math.floor(max * Math.random());
 
+document.write
+	("image1");
 
 
