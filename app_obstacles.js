@@ -1,55 +1,24 @@
-$(document).keydown(function(e){
+function afficheElements() {
 
-  if (e.which == 39) {// Vers la droite
-  posX = parseInt($('#soucoupe').css('left'));
-  if (posX < 470)
-    $('#soucoupe').css('left', posX+30);
+  var fromX = Math.floor(Math.random()*3)+5;
+  var fromY = Math.floor(Math.random()*3)+5;
+	var toX = Math.floor(Math.random()*500)+20;
+	var toY = Math.floor(Math.random()*300)+20;
+
+  var elemType = Math.floor(Math.random()*2);
+
+  if (elemType == 0) {
+    $('#bon').css('top',fromY).css('left',fromX);
+		$('#bon').css('transform', translate3d(toX + "px," + toY + "px, 0 px"));
+    $('#bon').show();
+    $('#mauvais').css('display','none');
+  }
+  else {
+    $('#mauvais').css('top',elemY).css('left',elemX);
+    $('#mauvais').show();
+    $('#bon').css('display','none');
   }
 
-  if (e.which == 37) { // Vers la gauche
-	posX = parseInt($('#soucoupe').css('left'));
-  if (posX > 20)
-  	$('#soucoupe').css('left', posX-30);
-  }
+};
 
-  if (e.which == 40) { // Vers le bas
-  posY = parseInt($('#soucoupe').css('top'));
-  if (posY < 230)
-    $('#soucoupe').css('top', posY+30);
-	}
-
-  if (e.which == 38) { // Vers le haut
-  posY = parseInt($('#soucoupe').css('top'));
-  if (posY > 20)
-    $('#soucoupe').css('top', posY-30);
-	}
-
-  if (e.which == 36) {// Vers le haut et la gauche
-  posX = parseInt($('#soucoupe').css('left'));
-  posY = parseInt($('#soucoupe').css('top'));
-  if ((posY > 20) && (posX > 20))
-    $('#soucoupe').css('left', posX-30).css('top', posY-30);
-  }
-
-  if (e.which == 33) { // Vers le haut et la droite
-  posX = parseInt($('#soucoupe').css('left'));
-  posY = parseInt($('#soucoupe').css('top'));
-  if ((posY > 20) && (posX < 470))
-    $('#soucoupe').css('left', posX+30).css('top', posY-30);
-  }
-
-  if (e.which == 35) { // Vers le bas et la gauche
-  posX = parseInt($('#soucoupe').css('left'));
-  posY = parseInt($('#soucoupe').css('top'));
-  if ((posX > 20) && (posY < 230))
-    $('#soucoupe').css('left', posX-30).css('top', posY+30);
-	}
-
-  if (e.which == 34) { // Vers le bas et la droite
-  posX = parseInt($('#soucoupe').css('left'));
-  posY = parseInt($('#soucoupe').css('top'));
-  if ((posY < 230) && (posX < 470))
-    $('#soucoupe').css('left', posX+30).css('top', posY+30);
-  }
-
-});
+setInterval(afficheElements, 2000);

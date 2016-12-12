@@ -5,21 +5,16 @@
       background: url('fond.png');
     }
 
-#soucoupe{
-      z-index: 200;
-      position: absolute;
-      top: 20px;
-      left: 70px;
-    }
-
 #bon{
       z-index: 100;
       position: absolute;
       display: none;
+			transform: translate3d();
     }
 
 #mauvais{
       z-index: 100;
       position: absolute;
       display: none;
+
     }
