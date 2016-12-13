@@ -9,20 +9,9 @@ body {
     position: relative;
 }
 
-#bon{
-    z-index: 100;
-    position: absolute;
-    display: none;
-}
-
-#mauvais{
-    z-index: 100;
-    position: absolute;
-    display: none;
-}
 
 .fly {
-animation-duration: 1.2s;
+animation-duration: 2s;
 animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 }
