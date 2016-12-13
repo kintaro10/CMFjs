@@ -1,0 +1,12 @@
+
+html {
+  cursor: url(pix/icon.png), pointer;
+}
+
+.info {
+  font-family: monospace;
+  position: absolute;
+  line-height: 20px;
+  font-size: 14px;
+
+}
