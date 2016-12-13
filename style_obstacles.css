@@ -22,9 +22,9 @@ body {
 }
 
 .fly {
-animation-duration: 1s;
+animation-duration: 1.2s;
 animation-iteration-count: infinite;
-animation-timing-function: linear;
+animation-timing-function: ease-in-out;
 }
 
 @keyframes fly-from-top {
@@ -34,5 +34,31 @@ animation-timing-function: linear;
   100% {
     top:100%;
   }
+}
 
+@keyframes fly-from-right {
+  0% {
+    right: 0;
+  }
+  100% {
+    right:100%;
+  }
+}
+
+@keyframes fly-from-bottom {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom:100%;
+  }
+}
+
+@keyframes fly-from-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left:100%;
+  }
 }
