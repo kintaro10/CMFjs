@@ -1,15 +1,18 @@
+body {
+  margin: 0;
+}
 #jeu {
-    width: 600px;
-    height: 400px;
+    width: 100vw;
+    height: 100vh;
     border: 2px black solid;
     background: url('fond.png');
+    position: relative;
 }
 
 #bon{
     z-index: 100;
     position: absolute;
     display: none;
-		transform: translate3d();
 }
 
 #mauvais{
@@ -18,10 +21,18 @@
     display: none;
 }
 
-.normal {
-  transition: transform 2s;
+.fly {
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
 }
 
-.fly {
-transform: translate3d(300px, 20px, 0px);
+@keyframes fly-from-top {
+  0% {
+    top: 0;
+  }
+  100% {
+    top:100%;
+  }
+
 }
