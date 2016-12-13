@@ -1,21 +1,27 @@
 #jeu {
-      width: 600px;
-      height: 400px;
-      border: 2px black solid;
-      background: url('fond.png');
-    }
+    width: 600px;
+    height: 400px;
+    border: 2px black solid;
+    background: url('fond.png');
+}
 
 #bon{
-      z-index: 100;
-      position: absolute;
-      display: none;
-			transform: translate3d();
-    }
+    z-index: 100;
+    position: absolute;
+    display: none;
+		transform: translate3d();
+}
 
 #mauvais{
-      z-index: 100;
-      position: absolute;
-      display: none;
-			transform: translate3d();
+    z-index: 100;
+    position: absolute;
+    display: none;
+}
 
-    }
+.normal {
+  transition: transform 2s;
+}
+
+.fly {
+transform: translate3d(300px, 20px, 0px);
+}
