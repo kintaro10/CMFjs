@@ -1,9 +1,15 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+let start = prompt("Entrez votre prénom :");
+alert("Bonjour " + start + " ," + " on y va ?");
+
+});
+
 function spawnPlanet() {
 
   const margin = 20;
   // VISIBILITE BON / MAUVAIS
   const elemType = Math.floor(Math.random()*2); //tirage aléatoire d'un nombre entre 0 et 2
-
   let newPlanet = document.createElement("img");
   newPlanet.className += "fly"
 
@@ -44,11 +50,9 @@ function spawnPlanet() {
     newPlanet.style.left = 0;
     newPlanet.style.top = fromY;
     newPlanet.style.animationName = "fly-from-left";
-    
+
     console.log('side3 : '+newPlanet);
   }
-
-
 
 };
 
