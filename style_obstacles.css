@@ -1,6 +1,7 @@
 body {
   margin: 0;
 }
+
 #jeu {
     width: 100vw;
     height: 100vh;
@@ -9,8 +10,8 @@ body {
     position: relative;
 }
 
-
 .fly {
+position: absolute;
 animation-duration: 2s;
 animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
