@@ -1,6 +1,10 @@
-
 html {
   cursor: url(pix/icon.png), pointer;
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
 }
 
 .info {
@@ -8,5 +12,16 @@ html {
   position: absolute;
   line-height: 20px;
   font-size: 14px;
+}
 
+.try {
+    position: absolute;
+    left: 50%;
+}
+
+#score {
+  font-size: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

@@ -1,3 +1,5 @@
+// trainée sexy
+
 (function batCursor() {
 
   var width = window.innerWidth;
@@ -119,3 +121,25 @@
 
   init();
 })();
+
+// mouseOver allez salut !
+let cpt = 0;
+document.getElementById("try").onmouseover = function() {mouseOver()};
+document.getElementById("try").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+    document.getElementById("try").style.display = "none" ;
+    cpt++;
+    document.getElementById("score").innerHTML = "Score : "+cpt;
+  }
+
+function mouseOut() {
+    document.getElementById("try").style.display = "none" ;
+  }
+
+// compteur de points
+
+function compteur() {
+
+  let score = document.getElementById("score");
+}
