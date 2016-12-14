@@ -49,7 +49,9 @@ function spawnPlanet() {
     newPlanet.style.left = 0;
     newPlanet.style.top = fromY +"px";
     newPlanet.style.animationName = "fly-from-left";
+    
   }
+
 };
 
 setInterval(spawnPlanet, 2000);
