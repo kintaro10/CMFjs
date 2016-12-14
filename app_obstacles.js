@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   let start = prompt("Entrez votre prénom :");
-  alert("Bonjour " + start + "," + " on y va ?");
+  alert("Bonjour " + start + "," + " es-tu prêt(e) à jouer au meilleur jeu de la galaxie ?");
 
 });
 
@@ -32,25 +32,24 @@ function spawnPlanet() {
 
   if(side === 0) { // top
     newPlanet.style.top = 0;
-    newPlanet.style.left = fromX;
+    newPlanet.style.left = fromX +"px";
     newPlanet.style.animationName = "fly-from-top";
 
   } else if (side === 1) { // right
     newPlanet.style.right = 0;
-    newPlanet.style.top = fromY;
+    newPlanet.style.top = fromY +"px";
     newPlanet.style.animationName = "fly-from-right"
 
   } else if (side === 2) { // bottom
     newPlanet.style.bottom = 0;
-    newPlanet.style.left = fromX;
+    newPlanet.style.left = fromX +"px";
     newPlanet.style.animationName = "fly-from-bottom";
 
   } else if (side === 3) { // left
     newPlanet.style.left = 0;
-    newPlanet.style.top = fromY;
+    newPlanet.style.top = fromY +"px";
     newPlanet.style.animationName = "fly-from-left";
   }
-
 };
 
 setInterval(spawnPlanet, 2000);
