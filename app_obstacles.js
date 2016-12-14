@@ -11,7 +11,7 @@ function spawnPlanet() {
   // VISIBILITE BON / MAUVAIS
   const elemType = Math.floor(Math.random()*2); //tirage aléatoire d'un nombre entre 0 et 2
   let newPlanet = document.createElement("img");
-  newPlanet.className += "fly"
+  newPlanet.className += "fly";
 
   if(elemType === 0) {
     newPlanet.src = "solar-system.png";
@@ -26,7 +26,7 @@ function spawnPlanet() {
   const side = Math.floor(Math.random() * 4);// tirage aléatoire d'un nombre entre 0 et 4 qui définira le point de départ
   const fromX = Math.floor(Math.random()* (window.innerWidth - 2*margin))+margin;//tirage aléatoire d'un nombre entre 20 (margin) et 980 (largeur de la fenêtre - margin) afin de définir une position horizontale
   const fromY = Math.floor(Math.random()*(window.innerHeight - 2*margin))+margin;
-  console.log(side);
+  console.log(fromX);
 
   if(side === 0) { // top
     newPlanet.style.top = 0;
@@ -59,7 +59,7 @@ function spawnPlanet() {
 setInterval(spawnPlanet, 2000);
 
 var score = 0;
-score.alert("Votre score est de");
+alert("Votre score est de");
 
 switch (score) {
 case score < 50 :
