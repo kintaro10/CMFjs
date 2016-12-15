@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let start = prompt("Entrez votre prénom :");
   alert("Bonjour " + start + "," + " es-tu prêt(e) à jouer au meilleur jeu de la galaxie ?");
-
 });
 
 function spawnPlanet() {
@@ -49,12 +48,15 @@ function spawnPlanet() {
     newPlanet.style.left = 0;
     newPlanet.style.top = fromY +"px";
     newPlanet.style.animationName = "fly-from-left";
-    
+
   }
 
+  newPlanet.addEventListener('animationend', function () {
+    this.parentNode.removeChild(this);
+  });
 };
 
-setInterval(spawnPlanet, 2000);
+setInterval(spawnPlanet, 0700);
 
 /*var score = 0;
 alert("Votre score est de :" )
