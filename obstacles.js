@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
 
   let start = prompt("Entrez votre prénom :");
   alert("Bonjour " + start + "," + " es-tu prêt(e) à jouer au meilleur jeu de la galaxie ?");
 });
-
+*/
 function spawnPlanet() {
 
   const margin = 20;
@@ -19,7 +19,7 @@ function spawnPlanet() {
   }
   newPlanet.className += "fly";
 
-  document.getElementById('jeu').appendChild(newPlanet);//rattache l'objet créé à son parent (#jeu)
+  document.getElementById('main').appendChild(newPlanet);//rattache l'objet créé à son parent (#jeu)
 
   // DEFINITION DES DIRECTIONS
   // 0:top, 1:right, 2:bottom, 3:left
