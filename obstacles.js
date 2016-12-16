@@ -13,13 +13,14 @@ function spawnPlanet() {
   let newPlanet = document.createElement("img");// création d'un élément image
 
   if(elemType === 0) {
-    newPlanet.src = "solar-system.png";// élément à toucher pour gagner 5 pts
+    newPlanet.src = "pic's/solar-system.png";// élément à toucher pour gagner 5 pts
   } else {
-    newPlanet.src = "saturn.png"; // élément à éviter
+    newPlanet.src = "pic's/saturn.png"; // élément à éviter
   }
   newPlanet.className += "fly";
 
   document.getElementById('main').appendChild(newPlanet);//rattache l'objet créé à son parent (#jeu)
+
 
   // DEFINITION DES DIRECTIONS
   // 0:top, 1:right, 2:bottom, 3:left

@@ -1,9 +1,16 @@
+
+html {
+  cursor: url("pic's/icon.png"), pointer;
+  height: 100%;
+}
+
 body {
   margin: 0;
   overflow: hidden;
-  height: 100vh;
   background-color: #ededed;
   display: flex;
+  box-sizing: border-box;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -67,4 +74,11 @@ animation-timing-function: ease-in-out;
   100% {
     left:100%;
   }
+}
+
+#score {
+  font-size: 80px;
+  bottom: 0;
+  position: absolute;
+  font-family: url("space.ttf");
 }
