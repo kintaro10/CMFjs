@@ -110,7 +110,7 @@
            "width: 20px;",
            "height: 20px;",
            "background-size: contain;",
-           "background-image: url(pic's/santa.png);",
+           "background-image: url(pics/santa.png);",
           "}"].join('');
 
     var style = document.createElement('style')

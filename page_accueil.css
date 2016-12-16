@@ -1,13 +1,13 @@
 @font-face {
-    font-family: Space;
+    font-family: space;
     src: url(space.ttf);
 }
 
 body {
   margin: 0;
-  background-image: url("pic's/couv4.jpg");
+  background-image: url("pics/couv4.jpg");
   background-size: cover;
-  font-family: Space, sans-serif;
+  font-family: space, sans-serif;
 }
 
 .header {

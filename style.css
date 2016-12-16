@@ -1,6 +1,6 @@
 
 html {
-  cursor: url("pic's/icon.png"), pointer;
+  cursor: url("pics/icon.png"), pointer;
   height: 100%;
 }
 
@@ -9,6 +9,11 @@ body {
   overflow: hidden;
   background-color: #ededed;
   height: 100%;
+}
+
+@font-face {
+    font-family: space;
+    src: url(space.ttf);
 }
 
 #main {
@@ -73,10 +78,9 @@ animation-timing-function: ease-in-out;
 }
 
 #score {
-  font-size: 80px;
+  font-size: 90px;
   bottom: 0;
-  color: #95a5a6;
+  color: #7f8c8d;
   position: absolute;
-  font-family: url("space.ttf");
-
+  font-family: space, sans-serif;
 }

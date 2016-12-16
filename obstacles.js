@@ -13,10 +13,10 @@ function spawnPlanet() {
   let newPlanet = document.createElement("img");// création d'un élément image
 
   if(elemType === 0) {
-    newPlanet.src = "pic's/solar-system.png";// élément à toucher pour gagner 5 pts
+    newPlanet.src = "pics/earth.png";// élément à toucher pour gagner 5 pts
     newPlanet.className += " goodplanet";
   } else {
-    newPlanet.src = "pic's/saturn.png"; // élément à éviter
+    newPlanet.src = "pics/saturn.png"; // élément à éviter
     newPlanet.className += " badplanet";
   }
   newPlanet.className += " fly";
