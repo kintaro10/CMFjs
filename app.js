@@ -124,27 +124,19 @@
 
 // mouseOver allez salut !
 let cpt = 0;
-newPlanet.onmouseover = function() {mouseOver()};
-newPlanet.onmouseout = function() {mouseOut()};
 
-
-if(elemType === 0) {
-
-function mouseOver() {
-    newPlanet.style.display = "none" ;
+function mouseOver(el) {
+  if (el.classList.contains("goodplanet")) {
+    el.style.display = "none" ;
     cpt++;
     document.getElementById("score").innerHTML = "Baclette : "+cpt;
   }
-  else {
-    newPlanet.style.display ="none" ;
-    alert("You lost, try again !")
+  else if (el.classList.contains("badplanet")) {
+    el.style.display ="none" ;
+    alert("You lost, try again !");
   }
 }
 
-
-function mouseOut() {
-    newPlanet.style.display = "none" ;
-  }
 
 // compteur de points
 
