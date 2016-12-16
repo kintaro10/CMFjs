@@ -1,4 +1,8 @@
 // trainée sexy
+window.addEventListener("mousemove", function(evenementmousemove){
+  document.getElementById("cursorperso").style.top = evenementmousemove.clientY-50+'px';
+  document.getElementById("cursorperso").style.left = evenementmousemove.clientX-50+'px';
+});
 
 (function batCursor() {
 
@@ -123,6 +127,7 @@
 })();
 
 // mouseOver allez salut !
+
 let cpt = 0;
 
 function mouseOver(el) {
@@ -134,9 +139,10 @@ function mouseOver(el) {
   else if (el.classList.contains("badplanet")) {
     el.style.display ="none" ;
     alert("You lost, try again !");
+    cpt=0;
+    document.getElementById("score").innerHTML = "Baclette : 0";
   }
 }
-
 
 // compteur de points
 

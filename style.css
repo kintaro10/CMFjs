@@ -1,6 +1,6 @@
 
 html {
-  cursor: url("pics/icon.png"), pointer;
+  cursor: none;
   height: 100%;
 }
 
@@ -14,6 +14,14 @@ body {
 @font-face {
     font-family: space;
     src: url(space.ttf);
+}
+
+#cursorperso {
+  width: 100px;
+  height: 100px;
+  background: url("pics/icon.png") no-repeat center center;
+  position: absolute;
+  z-index: 10;
 }
 
 #main {
@@ -34,6 +42,7 @@ body {
 position: absolute;
 animation-duration: 1.5s;
 animation-timing-function: ease-in-out;
+z-index: 12;
 }
 
 @keyframes fly-from-top {
