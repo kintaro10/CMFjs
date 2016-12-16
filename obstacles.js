@@ -1,9 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function() {
-
-  let start = prompt("Entrez votre prénom :");
-  alert("Bonjour " + start + "," + " es-tu prêt(e) à jouer au meilleur jeu de la galaxie ?");
-});
-*/
 function spawnPlanet() {
 
   const margin = 20;
@@ -13,9 +7,9 @@ function spawnPlanet() {
   let newPlanet = document.createElement("img");// création d'un élément image
 
   if(elemType === 0) {
-    newPlanet.src = "pic's/solar-system.png";// élément à toucher pour gagner 5 pts
+    newPlanet.src = "pic's/earth.png";// élément à toucher pour gagner 5 pts
   } else {
-    newPlanet.src = "pic's/saturn.png"; // élément à éviter
+    newPlanet.src = "pic's/hell.png"; // élément à éviter
   }
   newPlanet.className += "fly";
 
