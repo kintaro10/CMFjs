@@ -84,3 +84,10 @@ animation-timing-function: ease-in-out;
     left:100%;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .fly {
+    width: 90px;
+    height: 90px;
+  }
+}
