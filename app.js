@@ -124,17 +124,17 @@
 
 // mouseOver allez salut !
 let cpt = 0;
-document.getElementById("try").onmouseover = function() {mouseOver()};
-document.getElementById("try").onmouseout = function() {mouseOut()};
+document.getElementById("yes").onmouseover = function() {mouseOver()};
+document.getElementById("yes").onmouseout = function() {mouseOut()};
 
 function mouseOver() {
-    document.getElementById("try").style.display = "none" ;
+    document.getElementById("yes").style.display = "none" ;
     cpt++;
-    document.getElementById("score").innerHTML = "Score : "+cpt;
+    document.getElementById("score").innerHTML = "Baclette : "+cpt;
   }
 
 function mouseOut() {
-    document.getElementById("try").style.display = "none" ;
+    document.getElementById("yes").style.display = "none" ;
   }
 
 // compteur de points

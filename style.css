@@ -3,6 +3,7 @@ html {
   height: 100%;
 }
 body {
+  box-sizing: border-box;
   height: 100%;
   display: flex;
 }
@@ -13,15 +14,33 @@ body {
   line-height: 20px;
   font-size: 14px;
 }
+.no {
+  position: absolute;
+  left: 30%;
+}
 
 .try {
     position: absolute;
     left: 50%;
 }
 
-#score {
-  font-size: 100px;
+.footer {
   position: absolute;
   bottom: 0;
-  left: 0;
+  width: 100%;
+  border: 3px solid green;
+  height: 130px;
+  background-image: url(pix/deco.jpg);
+  background-repeat: round;
+  border-radius: 10%;
+}
+
+#score {
+  font-size: 80px;
+  position: absolute;
+  font-family: "Courier New";
+  letter-spacing: normal;
+  border-radius: 10%;
+  color: #ecf0f1;
+  margin-left: 5px;
 }
