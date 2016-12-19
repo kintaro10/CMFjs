@@ -10,6 +10,10 @@ body {
   font-family: space, sans-serif;
 }
 
+a {
+  color: #9b158b;
+}
+
 .header {
   position: absolute;
   display: block;
@@ -19,9 +23,20 @@ body {
 
 .titre {
   text-align: center;
-  left: 17%;
+  right: 8%;
   top: 21%;
   position: absolute;
   font-size: 40px;
   color: #d35400;
+}
+
+@media screen and (max-width : 600px) {
+  .titre {
+    font-size: 30px;
+    right: 5px;
+  }
+
+  body {
+    background-size:cover;
+  }
 }

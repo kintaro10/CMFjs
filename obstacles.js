@@ -1,9 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function() {
-
-  let start = prompt("Entrez votre prénom :");
-  alert("Bonjour " + start + "," + " es-tu prêt(e) à jouer au meilleur jeu de la galaxie ?");
-});
-*/
 function spawnPlanet() {
 
   const margin = 20;
@@ -16,7 +10,7 @@ function spawnPlanet() {
     newPlanet.src = "pics/earth.png";// élément à toucher pour gagner 5 pts
     newPlanet.className += " goodplanet";
   } else {
-    newPlanet.src = "pics/saturn.png"; // élément à éviter
+    newPlanet.src = "pics/hell.png"; // élément à éviter
     newPlanet.className += " badplanet";
   }
   newPlanet.className += " fly";
