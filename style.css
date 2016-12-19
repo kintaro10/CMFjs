@@ -21,9 +21,9 @@ body {
 
 
 #cursorperso {
-  width: 100px;
   height: 100px;
-  background: url("pics/icon.png") no-repeat center center;
+  width: 100px;
+  background: url("pics/rocket-icon.svg") no-repeat center center;
   position: absolute;
   z-index: 10;
 }

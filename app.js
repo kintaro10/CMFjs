@@ -138,7 +138,6 @@ function mouseOver(el) {
   }
   else if (el.classList.contains("badplanet")) {
     el.style.display ="none" ;
-    alert("You lost, try again !");
     cpt=0;
     document.getElementById("score").innerHTML = "Baclette : 0";
   }
