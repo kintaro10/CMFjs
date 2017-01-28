@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
-  </head>
-  <body>
-    <audio src="Star Wars Main Theme.mp3" autoplay></audio>
+</head>
+
+<body>
+    <audio id="music" src="Futuristic%20Music%20-%20Galaxy%20Fleet.mp3" autoplay></audio>
     <div id="cursorperso">
     </div>
+
+
+    <div id="cover">
+        <div id="score">
+            <h1>Game over!</h1>
+            <p id="result"></p>
+            <button id="rejouer" type="button">Rejouer!</button>
+            <button id="home" type="button"><a href="page_accueil.html">Menu Principal</a></button>
+        </div>
+    </div>
     <div id="main">
-			<canvas id="canvas" width="800px" height="600px"></canvas>
-		</div>
+        <canvas id="canvas" width="800px" height="600px"></canvas>
+    </div>
     <footer>
-  <span id= "score">Baclette : 0></span>
+        <span id="baclette">Score : 0</span>
+
+        <img id='mute' class='visible' src="pics/mute.png" alt="" />
+        <img id='sound' src="pics/sound.png" alt="" />
+        <div class="timer">
+            <p id="timer"></p>
+        </div>
     </footer>
-        <script src="app.js"></script>
-        <script src="obstacles.js"></script>
-        <script src="stars.js"></script>
-      </body>
+    <script src="app.js"></script>
+    <script src="stars.js"></script>
+</body>
+
 </html>
