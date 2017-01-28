@@ -139,15 +139,15 @@ function mouseOver(el) {
     if (el.classList.contains("goodplanet")) {
         el.style.display = "none";
         cpt++;
-        document.getElementById("score").innerHTML = "Score : " + cpt;
+        document.getElementById("baclette").innerHTML = "Score : " + cpt;
     } else if (el.classList.contains("badplanet")) {
         if (cpt > 0) {
             el.style.display = "none";
             cpt--;
-            document.getElementById("score").innerHTML = "Score : " + cpt;
+            document.getElementById("baclette").innerHTML = "Score : " + cpt;
         } else {
             el.style.display = "none";
-            document.getElementById("score").innerHTML = "Score : 0";
+            document.getElementById("baclette").innerHTML = "Score : 0";
 
         }
     }
@@ -157,5 +157,37 @@ function mouseOver(el) {
 
 function compteur() {
 
-    let score = document.getElementById("score");
+    let baclette = document.getElementById("baclette");
 }
+
+//Fenetre score final + chrono
+
+let timeLeft = 30;
+let timer = document.getElementById("timer");
+let popup = document.getElementById('score');
+let cover = document.getElementById('cover');
+
+let countdown = function () {
+
+    if (timeLeft < 0) {
+        clearTimeout(timerId);
+        let paragraph = document.getElementById('result');
+        if (cpt == 0) {
+            paragraph.innerHTML = "Ton score est de : " + cpt + ". La honte sur toi Maurice !!";
+        } else if (cpt < 20) {
+            paragraph.innerHTML = "Mouais ton score est de : " + cpt + ". Tu peux faire mieux mon vieux !";
+        } else {
+            paragraph.innerHTML = "Ton score est de : " + cpt + ". T'es un killer !!";
+        }
+
+        document.querySelector('h1').appendChild(paragraph);
+        cover.classList.add("visible");
+        popup.classList.add("visible");
+
+    } else {
+        timer.innerHTML = timeLeft;
+        timeLeft--;
+    }
+};
+let timerId = setInterval(countdown, 1000);
+document.addEventListener("DOMContentLoaded", countdown());
