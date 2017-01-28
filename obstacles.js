@@ -1,4 +1,4 @@
-function spawnPlanet() {
+/*function spawnPlanet() {
 
   const margin = 20;
   // VISIBILITE BON / MAUVAIS
@@ -56,20 +56,3 @@ function spawnPlanet() {
 };
 
 setInterval(spawnPlanet, 0700);
-
-/*var score = 0;
-alert("Votre score est de :" )
-
-switch (score) {
-case score < 50 :
-     alert("T'es bidon");
-    break;
-case score > 51 && score < 100:
-    alert("Pas mal mais peut mieux faire");
-    break;
-case score > 100:
-    alert("T'es un killer!!!");
-    break;
-default:
-    alert("Je ne comprends pas abruti!");
-};*/
