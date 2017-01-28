@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
-  </head>
-  <body>
+</head>
+
+<body>
     <audio src="Star Wars Main Theme.mp3" autoplay></audio>
     <div id="cursorperso">
     </div>
+    <div id="msg" class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <p id="txtmsg"></p>
+        <br>
+        <button id="btn-msg-done" class="btn btn-success">Try again</button>
+        <a href="page_accueil.html" class="btn btn-danger">Go home</a>
+    </div>
     <div id="main">
-			<canvas id="canvas" width="800px" height="600px"></canvas>
-		</div>
+        <canvas id="canvas" width="800px" height="600px"></canvas>
+    </div>
     <footer>
-  <span id= "score">Baclette : 0></span>
+        <span id="score">Score : 0</span>
     </footer>
-        <script src="app.js"></script>
-        <script src="obstacles.js"></script>
-        <script src="stars.js"></script>
-      </body>
+    <script src="app.js"></script>
+    <script src="obstacles.js"></script>
+    <script src="stars.js"></script>
+</body>
+
 </html>

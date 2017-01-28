@@ -1,111 +1,116 @@
 // trainée sexy
-window.addEventListener("mousemove", function(evenementmousemove){
-  document.getElementById("cursorperso").style.top = evenementmousemove.clientY-50+'px';
-  document.getElementById("cursorperso").style.left = evenementmousemove.clientX-50+'px';
+window.addEventListener("mousemove", function (evenementmousemove) {
+    document.getElementById("cursorperso").style.top = evenementmousemove.clientY - 50 + 'px';
+    document.getElementById("cursorperso").style.left = evenementmousemove.clientX - 50 + 'px';
 });
 
 (function batCursor() {
 
-  var width = window.innerWidth;
-  var height = window.innerHeight;
-  var cursor = {x: width/2, y: width/2};
-  var particles = [];
-
-  function init() {
-    bindEvents();
-    attachInitialParticleStyles();
-    loop();
-  }
-
-  function bindEvents() {
-    document.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('resize', onWindowResize);
-  }
-
-  function onWindowResize(e) {
-    width = window.innerWidth;
-    height = window.innerHeight;
-  }
-
-  function onTouchMove(e) {
-    if( e.touches.length > 0 ) {
-      for( var i = 0; i < e.touches.length; i++ ) {
-        addParticle(e.touches[i].clientX, e.touches[i].clientY);
-      }
-    }
-  }
-
-  function onMouseMove(e) {
-    cursor.x = e.clientX;
-    cursor.y = e.clientY;
-
-    addParticle( cursor.x, cursor.y);
-  }
-
-  function addParticle(x, y) {
-    var particle = new Particle();
-    particle.init(x, y);
-    particles.push(particle);
-  }
-
-  function updateParticles() {
-    for( var i = 0; i < particles.length; i++ ) {
-      particles[i].update();
-    }
-
-    for( var i = particles.length - 1; i >= 0; i-- ) {
-      if( particles[i].lifeSpan < 0 ) {
-        particles[i].die();
-        particles.splice(i, 1);
-      }
-    }
-
-  }
-
-  function loop() {
-    requestAnimationFrame(loop);
-    updateParticles();
-  }
-
-  function Particle() {
-
-    this.lifeSpan = 200;
-
-    this.init = function(x, y) {
-
-      this.velocity = {
-        x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 2),
-        y: (-2.5 + (Math.random() * -1))
-      };
-
-      this.position = {x: x -1, y: y -1 };
-
-      this.element = document.createElement('span');
-      this.element.className = "particle-santa"
-      this.update();
-
-      document.body.appendChild(this.element);
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var cursor = {
+        x: width / 2,
+        y: width / 2
     };
 
-    this.update = function() {
-      this.position.x += this.velocity.x;
-      this.position.y += this.velocity.y;
+    function init() {
+        bindEvents();
 
-      this.velocity.x += (Math.random() < 0.5 ? -1 : 1) * 2 / 75;
-      this.velocity.y -= Math.random() / 600;
-      this.lifeSpan--;
-
-      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + ( 0.2 + (250 - this.lifeSpan) / 250) + ")";
+        loop();
     }
 
-    this.die = function() {
-      this.element.parentNode.removeChild(this.element);
+    function bindEvents() {
+        document.addEventListener('mousemove', onMouseMove);
+        window.addEventListener('resize', onWindowResize);
     }
-  }
 
-  function attachInitialParticleStyles() {
+    function onWindowResize(e) {
+        width = window.innerWidth;
+        height = window.innerHeight;
+    }
 
-    var initialStyles = [
+    function onTouchMove(e) {
+        if (e.touches.length > 0) {
+            for (var i = 0; i < e.touches.length; i++) {
+                addParticle(e.touches[i].clientX, e.touches[i].clientY);
+            }
+        }
+    }
+
+    function onMouseMove(e) {
+        cursor.x = e.clientX;
+        cursor.y = e.clientY;
+
+        addParticle(cursor.x, cursor.y);
+    }
+
+    function addParticle(x, y) {
+        var particle = new Particle();
+        particle.init(x, y);
+        particles.push(particle);
+    }
+
+    /*function updateParticles() {
+        for (var i = 0; i < particles.length; i++) {
+            particles[i].update();
+        }
+
+        for (var i = particles.length - 1; i >= 0; i--) {
+            if (particles[i].lifeSpan < 0) {
+                particles[i].die();
+                particles.splice(i, 1);
+            }
+        }
+
+    }*/
+
+    function loop() {
+        requestAnimationFrame(loop);
+
+    }
+
+    /*function Particle() {
+
+        this.lifeSpan = 200;
+
+        this.init = function (x, y) {
+
+            this.velocity = {
+                x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 2),
+                y: (-2.5 + (Math.random() * -1))
+            };
+
+            this.position = {
+                x: x - 1,
+                y: y - 1
+            };
+
+            this.element = document.createElement('span');
+            this.element.className = "particle-santa"
+            this.update();
+
+            document.body.appendChild(this.element);
+        };
+
+        this.update = function () {
+            this.position.x += this.velocity.x;
+            this.position.y += this.velocity.y;
+
+            this.velocity.x += (Math.random() < 0.5 ? -1 : 1) * 2 / 75;
+            this.velocity.y -= Math.random() / 600;
+            this.lifeSpan--;
+
+            this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (0.2 + (250 - this.lifeSpan) / 250) + ")";
+        }
+
+        this.die = function () {
+            this.element.parentNode.removeChild(this.element);
+        }
+    }
+
+    function attachInitialParticleStyles() {
+
+        var initialStyles = [
            ".particle-santa {",
            "position: absolute;",
            "display: block;",
@@ -117,13 +122,13 @@ window.addEventListener("mousemove", function(evenementmousemove){
            "background-image: url(pics/santa.png);",
           "}"].join('');
 
-    var style = document.createElement('style')
-    style.type = 'text/css'
-    style.innerHTML = initialStyles;
-    document.getElementsByTagName('head')[0].appendChild(style)
-  };
+        var style = document.createElement('style')
+        style.type = 'text/css'
+        style.innerHTML = initialStyles;
+        document.getElementsByTagName('head')[0].appendChild(style)
+    };*/
 
-  init();
+    init();
 })();
 
 // mouseOver allez salut !
@@ -131,21 +136,26 @@ window.addEventListener("mousemove", function(evenementmousemove){
 let cpt = 0;
 
 function mouseOver(el) {
-  if (el.classList.contains("goodplanet")) {
-    el.style.display = "none" ;
-    cpt++;
-    document.getElementById("score").innerHTML = "Baclette : "+cpt;
-  }
-  else if (el.classList.contains("badplanet")) {
-    el.style.display ="none" ;
-    cpt=0;
-    document.getElementById("score").innerHTML = "Baclette : 0";
-  }
+    if (el.classList.contains("goodplanet")) {
+        el.style.display = "none";
+        cpt++;
+        document.getElementById("score").innerHTML = "Score : " + cpt;
+    } else if (el.classList.contains("badplanet")) {
+        if (cpt > 0) {
+            el.style.display = "none";
+            cpt--;
+            document.getElementById("score").innerHTML = "Score : " + cpt;
+        } else {
+            el.style.display = "none";
+            document.getElementById("score").innerHTML = "Score : 0";
+
+        }
+    }
 }
 
 // compteur de points
 
 function compteur() {
 
-  let score = document.getElementById("score");
+    let score = document.getElementById("score");
 }
