@@ -269,6 +269,8 @@ rejouer.addEventListener("click", function () {
 
 });
 
+//MUSIC PLAY ON OFF
+
 document.getElementById('mute').addEventListener("click", function () {
     document.getElementById('music').pause();
     document.getElementById('sound').classList.add('visible');
